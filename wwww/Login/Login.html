@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel = "stylesheet" type="text/css" href="LoginStyle.css">
+</head>
+
+<body>
+<div id="formWrapper">
+  <form action="http://localhost/Login.php" method="POST" name="tienda" id="tienda">
+    <fieldset class="first">
+      <h4>Ingresar datos</h4>
+      <label class="labelOne" for="Correo">Correo:	</label>
+      <input name="Correo"/>
+      <label for="Contraseña">Contraseña: </label>
+      <input name="Contraseña"/>
+    </fieldset>
+    <fieldset>
+      <input class="btn" name="submit" type="submit" value="Entrar"/>
+      <input class="btn" name="reset" type="reset" value="Clear Form"/>
+      <input class="btn" name="redirect" type="button" value="Registrarse" onclick="window.location.href='Registro.html'"/>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
+
+

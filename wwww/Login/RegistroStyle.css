@@ -1,0 +1,11 @@
+body {background: url('adaa.jpg');margin: 0; padding: 0}
+#formWrapper{width: 550px; background: #AFC8DE; margin: 2em auto 0 auto; padding: 2em 0 2em 0; border: solid 5px #f1f1f1;}
+form {width: 500px; margin: 0 auto 0 auto;}
+label{display: block; margin: 0.3em 0 0.3em 2em; font-family: Arial, Helvetica, sans-serif; color:#3e1e1e88; font-size: large;}
+input{width:250px; margin: 0 0 0 2em;}
+textarea{width: 250px; margin: 0 0 0 2em;}
+fieldset{border: none; background: #f1f1f1; padding: 0 0 2em 0;}
+fieldset.first{background: #f1f1f1 url("ñ.jpg") no-repeat; }
+.labelOne{margin-top: large;}
+.btn{width: 125px; margin: 0 0 0 2em; font-family: Arial, Helvetica, sans-serif; color: #55555555; font-weight: bold;}
+form h4{margin: large 0 1.5em 2em; font-size: 1.2em; font-family: Arial, Helvetica, sans-serif; color: #253c34; font-weight: bold;}
