@@ -1,6 +1,7 @@
 <?php
 //get product list from database
 //connect to database
+
 function getList(){
     $mysqli = mysqli_connect("localhost","root","","tienda");
     if (mysqli_connect_errno()) {
@@ -12,7 +13,11 @@ function getList(){
 
 //display fetched products in a list
     session_start();
-    $_SESSION['products'] = $result;
+    $array[] = array();
+    while ($row = mysqli_fetch_array($result)) {
+        $array[] = $row;
+    }
+    $_SESSION['products'] = $array;
     /*echo "<ul>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<li>";
@@ -22,8 +27,8 @@ function getList(){
         echo ")";
         echo "</li>";
     }
-    echo "</ul>";
-    */
+    echo "</ul>";*/
+
 
 //close connection
     mysqli_close($mysqli);

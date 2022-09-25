@@ -2,6 +2,8 @@
 <?php
     session_start();
     $usuario = $_SESSION['Nombre'];
+    $mysqli = mysqli_connect("localhost","root","","tienda");
+
 ?>
 <html>
 <head>
@@ -61,62 +63,71 @@
     <section class="mainContent">
       <div class="productRow"><!-- Each product row contains info of 3 elements -->
         <article class="productInfo"><!-- Each individual product description -->
+            <?php $row = $_SESSION['products']; ?>
           <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder </p>
+          <p class="price"><?php echo "$".$row[1]['Precio']; ?></p>
+          <p class="productContent"><?php echo $row[1]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[2]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[2]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"> <!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[3]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[3]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
       </div>
       <div class="productRow"> 
         <!-- Each product row contains info of 3 elements -->
         <article class="productInfo"> <!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[4]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[4]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"> <!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[5]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[5]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[6]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[6]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
       </div>
       <div class="productRow">
         <article class="productInfo"> <!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[7]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[7]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[8]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[8]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-          <p class="price">$50</p>
-          <p class="productContent">Content holder</p>
+            <?php $row = $_SESSION['products']; ?>
+            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+            <p class="price"><?php echo "$".$row[9]['Precio']; ?></p>
+            <p class="productContent"><?php echo $row[9]['Nombre']; ?> </p>
           <input type="button" name="button" value="Buy" class="buyButton">
         </article>
       </div>

@@ -13,7 +13,7 @@
     }else{
         $_SESSION['Correo'] = "";
         $_SESSION['Nombre'] = "Invitado";
-        header('Location: '.$uri.'/wwww/eCommerce/Login/Login.html');
+        header('Location: '.$uri.'/wwww/eCommerce/plantilla.php');
     }
 	exit;
 ?>
