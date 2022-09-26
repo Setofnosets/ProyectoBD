@@ -2,7 +2,12 @@
 <?php
     session_start();
     $usuario = $_SESSION['Nombre'];
-    $array[] = array();
+    if(isset($_SESSION['carrito'])){
+        $array = $_SESSION['carrito'];
+    }else{
+        $array = array();
+        $_SESSION['carrito'] = $array;
+    }
     $mysqli = mysqli_connect("localhost","root","","tienda");
 
     function addIDtoArray($id, $array){
@@ -28,28 +33,18 @@
     <div id="logo"> <!-- <img src="logoImage.png" alt="sample logo"> --> 
       <!-- Company Logo text --> 
       LOGO </div>
-    <div id="headerLinks"><a href="../Login/Login.html" title="Login/Register">Login/Register</a><a href="#" title="Cart">Cart</a></div>
+    <div id="headerLinks"><a href="../Login/Login.html" title="Login/Register">Login/Register</a><a href="Carrito.php" title="Cart">Cart</a></div>
   </header>
   <section id="offer"> 
     <!-- The offer section displays a banner text for promotions -->
       <h1><?php echo "Hola, ".$usuario; ?></h1>
-       <h1><?php
-            $array = $_SESSION['carrito'];
-            for($i = 0; $i < count($array); $i++){
-                echo $array[$i];
-            }
-        ?></h1>
-      <?php if(array_key_exists('clear', $_POST)) {
-            clearCart();
-        }
-        function clearCart(){
-            $array = array();
-            $_SESSION['carrito'] = $array;
-        }
-        ?>
-      <form method="post">
-          <input type="submit" name="clear" value="clear">
-      </form>
+      <?php
+          //No se porque pero literal si no esta esto se muere
+          $array = $_SESSION['carrito'];
+          for($i = 0; $i < count($array); $i++){
+              //echo $array[$i];
+          }
+          ?>
     <h3>OFFER 50%</h3>
     <p>REALLY AWESOME DISCOUNTS THIS JULY</p>
   </section>
