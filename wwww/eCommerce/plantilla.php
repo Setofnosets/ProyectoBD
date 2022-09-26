@@ -6,7 +6,7 @@
     $mysqli = mysqli_connect("localhost","root","","tienda");
 
     function addIDtoArray($id, $array){
-        array_push($array, $id);
+        $array[] = $id;
         $_SESSION['carrito'] = $array;
     }
 
