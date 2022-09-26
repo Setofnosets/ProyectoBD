@@ -52,6 +52,10 @@
                  <input type="submit" name="regresar" value="Regresar"/>
              </form>
              <?php
+             if(isset($_POST['comprar'])){
+                 $cantidad = $_POST['cantidad'];
+                 header("Location: Pago.php");
+             }
              if(isset($_POST['clear'])){
                  $array = array();
                  $_SESSION['carrito'] = $array;
