@@ -25,7 +25,7 @@ if ($rowcount>1 || $rowcount2>1) {
     printf("Result set has %d rows.\n",$rowcount);
 } else {
     $insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`Correo` , `Contraseña`) VALUES ("' . $subs_email . '", "' . $subs_contraseña . '")';
-    $insert_value2 = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name2.'` (`Correo`, `Contraseña`, `Nombre`, `Apellido1`, `Apellido2`) VALUES ("' . $subs_email . '", "' . $subs_contraseña . '", "' . $subs_name . '", "' . $subs_apellido1 . '", "' . $subs_apellido2 . '")';
+    $insert_value2 = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name2.'` (`Correo`, `Nombre`, `Apellido1`, `Apellido2`) VALUES ("' . $subs_email . '", "' . $subs_name . '", "' . $subs_apellido1 . '", "' . $subs_apellido2 . '")';
     mysqli_select_db($db_connection, $db_name);
     $retry_value = mysqli_query($db_connection,$insert_value);
     $retry_value2 = mysqli_query($db_connection,$insert_value2);
