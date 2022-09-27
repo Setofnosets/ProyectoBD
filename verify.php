@@ -20,10 +20,6 @@ $resultado2=mysqli_query($db_connection, "SELECT * FROM ". $db_table_name2);
 $rowcount=mysqli_num_rows($resultado);
 $rowcount2=mysqli_num_rows($resultado2);
 
-if ($rowcount>1 || $rowcount2>1) {
-    //header('Location: db_rows.html');
-    printf("Result set has %d rows.\n",$rowcount);
-} else {
     $insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`Correo` , `Contraseña`) VALUES ("' . $subs_email . '", "' . $subs_contraseña . '")';
     $insert_value2 = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name2.'` (`Correo`, `Nombre`, `Apellido1`, `Apellido2`) VALUES ("' . $subs_email . '", "' . $subs_name . '", "' . $subs_apellido1 . '", "' . $subs_apellido2 . '")';
     mysqli_select_db($db_connection, $db_name);
@@ -34,7 +30,7 @@ if ($rowcount>1 || $rowcount2>1) {
         die('Error: ' . mysqli_error());
     }
     header('Location: index.php');
-}
+
 mysqli_free_result($resultado);
 mysqli_free_result($resultado2);
 mysqli_close($db_connection);
