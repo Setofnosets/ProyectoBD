@@ -25,16 +25,16 @@ $cantidad = $_SESSION['cantidad'];
                 $total = 0;
                 $mysqli = mysqli_connect("localhost","root","","tienda");
                 for ($i = 0; $i < count($array); $i++){
-                $result = mysqli_query($mysqli, "SELECT Nombre, Precio FROM productos WHERE id_producto = $array[$i]");
-                $row = mysqli_fetch_array($result);
-                $total += ($row['Precio'] * $cantidad[$i]);
-                echo "<tr>";
-                echo "<td>".$row['Nombre']."</td>";
-                echo "<td>".$row['Precio']."</td>";
-                echo "<td>".$cantidad[$i]."</td>";
-                echo "</tr>";
-            }
-            ?>
+                    $result = mysqli_query($mysqli, "SELECT Nombre, Precio FROM productos WHERE id_producto = $array[$i]");
+                    $row = mysqli_fetch_array($result);
+                    $total += ($row['Precio'] * $cantidad[$i]);
+                    echo "<tr>";
+                    echo "<td>".$row['Nombre']."</td>";
+                    echo "<td>".$row['Precio']."</td>";
+                    echo "<td>".$cantidad[$i]."</td>";
+                    echo "</tr>";
+                }
+                ?>
         </table>
         <table
             <th>Total: </th>

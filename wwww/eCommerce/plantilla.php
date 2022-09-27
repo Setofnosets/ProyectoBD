@@ -37,6 +37,7 @@
   </header>
   <section id="offer"> 
     <!-- The offer section displays a banner text for promotions -->
+      <h1>Tienda de comida: </h1>
       <h1><?php echo "Hola, ".$usuario; ?></h1>
       <?php
           //No se porque pero literal si no esta esto se muere
@@ -45,38 +46,8 @@
               //echo $array[$i];
           }
           ?>
-    <h3>OFFER 50%</h3>
-    <p>REALLY AWESOME DISCOUNTS THIS JULY</p>
   </section>
   <div id="content">
-    <section class="sidebar"> 
-      <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
-      <input type="text"  id="search" value="search">
-      <div id="menubar">
-        <nav class="menu">
-          <h2><!-- Title for menuset 1 -->MENU ITEM 1 </h2>
-          <hr>
-          <ul>
-            <!-- List of links under menuset 1 -->
-            <li><a href="#" title="Link">Link 1</a></li>
-            <li><a href="#" title="Link">Link 2</a></li>
-            <li><a href="#" title="Link">Link 3</a></li>
-            <li class="notimp"><!-- notimp class is applied to remove this link from the tablet and phone views --><a href="#"  title="Link">Link 4</a></li>
-          </ul>
-        </nav>
-        <nav class="menu">
-          <h2>MENU ITEM 2 </h2>
-          <!-- Title for menuset 2 -->
-          <hr>
-          <ul>
-            <!--List of links under menuset 2 -->
-            <li><a href="#" title="Link">Link 1</a></li>
-            <li><a href="#" title="Link">Link 2</a></li>
-            <li><a href="#" title="Link">Link 3</a></li>
-            <li class="notimp"><!-- notimp class is applied to remove this link from the tablet and phone views --><a href="#" title="Link">Link 4</a></li>
-          </ul>
-        </nav>
-      </div>
     </section>
     <section class="mainContent">
       <div class="productRow"><!-- Each product row contains info of 3 elements -->
@@ -173,15 +144,10 @@
   <footer> 
     <!-- This is the footer with default 3 divs -->
     <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
+      <p>Buscamos darte el mejor servicio.</p>
     </div>
     <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
-    </div>
-    <div class="footerlinks">
-      <p><a href="#" title="Link">Link 1 </a></p>
-      <p><a href="#" title="Link">Link 2</a></p>
-      <p><a href="#" title="Link">Link 3</a></p>
+      <p>Cualquier duda preguntele a montserrat.</p>
     </div>
   </footer>
 </div>
