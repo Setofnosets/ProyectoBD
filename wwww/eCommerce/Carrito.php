@@ -13,8 +13,8 @@
 
 <body>
 <div id="FormWrapper"
-     <form method="post">
-         <fieldset class="Carro"
+         <fieldset class="Carro">
+             <form method="post">
                    <h4>Carrito</h4>
                      <table>
                          <tr>
@@ -33,31 +33,41 @@
                                  $row = mysqli_fetch_array($result);
                                  $row2 = mysqli_fetch_array($result2);
                                  echo "<tr>";
-                                    echo "<td><img src='./Imagenes/".($i+1).".jpg' width='100' height='100'></td>";
+                                 echo "<td><img src='./Imagenes/".($array[$i]).".jpg' width='100' height='100'></td>";
                                  echo "<td>".$row['Nombre']."</td>";
                                  echo "<td>".$row['Precio']."</td>";
                                  echo "<td>".$row2['Descripcion']."</td>";
                                  echo "<td>".$row2['Categoria']."</td>";
-                                    echo "<td><input type='number' name='cantidad[]' value='0' min='0' max='$row2[Disponibilidad]'</td>";
-                                    if($row2['Disponibilidad'] == 0){
-                                        echo "<td><input type='checkbox' name='disponibilidad[]' value='0' disabled></td>";
-                                    }
+                                 echo "<td><input type='number' name='cantidad[]' value='0' min='0' max='$row2[Disponibilidad]'</td>";
+                                 if($row2['Disponibilidad'] == 0){
+                                     echo "<td><input type='checkbox' name='disponibilidad[]' value='0' disabled></td>";
+                                 }
+
                                  echo "</tr>";
                              }
-                         ?>
-                        </table>
+                        echo "</table>";
+                           echo "<input type='submit' name='Comprar' value='Comprar'/>";
+                         if(isset($_POST['Comprar'])){
+                             if(isset($_POST['cantidad'])){
+                                 $cantidad = $_POST['cantidad'];
+                                 $_SESSION['cantidad'] = $cantidad;
+                                 header("Location: http://localhost/wwww/eCommerce/Pago.php");
+
+                             }else{
+                                 echo "No hay productos en el carrito";
+                             }
+                         }
+                        ?>
+             </form>
          </fieldset>
          <fieldset>
              <form method="post">
                  <input type="submit" name="clear" value="Vaciar Carrito"/>
-                 <input type="submit" name="comprar" value="Comprar" class="button"/>
+
                  <input type="submit" name="regresar" value="Regresar"/>
              </form>
              <?php
-             if(isset($_POST['comprar'])){
-                 $cantidad = $_POST['cantidad'];
-                 header("Location: Pago.php");
-             }
+
              if(isset($_POST['clear'])){
                  $array = array();
                  $_SESSION['carrito'] = $array;
@@ -67,10 +77,8 @@
                  header("Location: plantilla.php");
              }
              ?>
-            </fieldset>
-     </form>
-
-
+         </fieldset>
+</div>
 </body>
 </html>
 
