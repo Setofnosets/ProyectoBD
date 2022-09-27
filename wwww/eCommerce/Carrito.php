@@ -18,6 +18,7 @@
                    <h4>Carrito</h4>
                      <table>
                          <tr>
+                             <th>Imagen</th>
                              <th>Producto</th>
                              <th>Precio</th>
                              <th>Descripcion</th>
@@ -32,11 +33,12 @@
                                  $row = mysqli_fetch_array($result);
                                  $row2 = mysqli_fetch_array($result2);
                                  echo "<tr>";
+                                    echo "<td><img src='./Imagenes/".($i+1).".jpg' width='100' height='100'></td>";
                                  echo "<td>".$row['Nombre']."</td>";
                                  echo "<td>".$row['Precio']."</td>";
                                  echo "<td>".$row2['Descripcion']."</td>";
                                  echo "<td>".$row2['Categoria']."</td>";
-                                    echo "<td><input type='number' name='cantidad[]' value='1' min='1' max='$row2[Disponibilidad]'</td>";
+                                    echo "<td><input type='number' name='cantidad[]' value='0' min='0' max='$row2[Disponibilidad]'</td>";
                                     if($row2['Disponibilidad'] == 0){
                                         echo "<td><input type='checkbox' name='disponibilidad[]' value='0' disabled></td>";
                                     }

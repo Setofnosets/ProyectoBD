@@ -82,27 +82,27 @@
       <div class="productRow"><!-- Each product row contains info of 3 elements -->
         <article class="productInfo"><!-- Each individual product description -->
             <?php $row = $_SESSION['products']; ?>
-          <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
+          <div><img alt="sample" src="./Imagenes/<?php echo $row[1]['ID_Producto']?>.jpg" height="100" width="150"></div>
+            <p class="productContent"><?php echo $row[1]['Nombre']; ?> </p>
           <p class="price"><?php echo "$".$row[1]['Precio']; ?></p>
-          <p class="productContent"><?php echo $row[1]['Nombre']; ?> </p>
             <?php if(array_key_exists('add1', $_POST)){ addIDtoArray($row[1]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add1" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[2]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[2]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[2]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[2]['Precio']; ?></p>
             <?php if(array_key_exists('add2', $_POST)){ addIDtoArray($row[2]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add2" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"> <!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[3]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[3]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[3]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[3]['Precio']; ?></p>
             <?php if(array_key_exists('add3', $_POST)){ addIDtoArray($row[3]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add3" value="Add to cart" class="button">
@@ -112,27 +112,27 @@
       <div class="productRow"> 
         <!-- Each product row contains info of 3 elements -->
         <article class="productInfo"> <!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[4]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[4]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[4]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[4]['Precio']; ?></p>
             <?php if(array_key_exists('add4', $_POST)){ addIDtoArray($row[4]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add4" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"> <!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[5]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[5]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[5]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[5]['Precio']; ?></p>
             <?php if(array_key_exists('add5', $_POST)){ addIDtoArray($row[5]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add5" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[6]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[6]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[6]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[6]['Precio']; ?></p>
             <?php if(array_key_exists('add6', $_POST)){ addIDtoArray($row[6]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add6" value="Add to cart" class="button">
@@ -141,27 +141,27 @@
       </div>
       <div class="productRow">
         <article class="productInfo"> <!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[7]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[7]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[7]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[7]['Precio']; ?></p>
             <?php if(array_key_exists('add7', $_POST)){ addIDtoArray($row[7]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add7" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[8]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[8]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[8]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[8]['Precio']; ?></p>
             <?php if(array_key_exists('add8', $_POST)){ addIDtoArray($row[8]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add8" value="Add to cart" class="button">
             </form>
         </article>
         <article class="productInfo"><!-- Each individual product description -->
-            <div><img alt="sample" src="../../../../../../Applications/XAMPP/xamppfiles/htdocs/emailPHP/eCommerceAssets/images/200x200.png"></div>
-            <p class="price"><?php echo "$".$row[9]['Precio']; ?></p>
+            <div><img alt="sample" src="./Imagenes/<?php echo $row[9]['ID_Producto']?>.jpg" height="100" width="150"></div>
             <p class="productContent"><?php echo $row[9]['Nombre']; ?> </p>
+            <p class="price"><?php echo "$".$row[9]['Precio']; ?></p>
             <?php if(array_key_exists('add9', $_POST)){ addIDtoArray($row[9]['ID_Producto'], $array); } ?>
             <form method="post">
                 <input type="submit" name="add9" value="Add to cart" class="button">
